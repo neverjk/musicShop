@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace _02._11_exam.ViewModel
 {
-    public class ListCategoriesViewModel
+    public class ListSubcategoriesViewModel
     {
-        public IEnumerable<Category> GetCategories { get; set; }
         public IEnumerable<Subcategory> GetSubcategories { get; set; }
+        public string MainCategory { get; set; }
     }
 }

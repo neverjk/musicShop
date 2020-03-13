@@ -12,44 +12,17 @@ using System.Threading.Tasks;
 
 namespace _02._11_exam.Controllers
 {
-    public class CategoriesController : Controller
+    public class SubcategoriesController : Controller
     {
-        private readonly ICategory _categories;
         private readonly ISubcategory _subcategories;
 
-        public CategoriesController(ISubcategory subcategories, ICategory categories, ICategory category)
+
+        public SubcategoriesController(ISubcategory subcategories, ISubcategory subcategory)
         {
             _subcategories = subcategories;
-            _categories = categories;
         }
 
-        //[Authorize(Roles="User")]
-        [Route("Category/ListCategories")]
-        //[Route("Cars/ListCars/{category}")] // таке саме як ім'я як і параметр
-        public ViewResult CategoriesList()
-        {
-            var info = HttpContext.Session.GetString("UserInfo");
-            if (info != null)
-            {
-                var result = JsonConvert.DeserializeObject<UserInfo>(info);
-                var id = result.UserId;
-            }
-
-            IEnumerable<Category> categories = null;
-            categories = _categories.GetCategories.OrderBy(i=>i.CategoryName);
-            
-
-            var categoryObj = new ListCategoriesViewModel
-            {
-                GetCategories = categories,
-            };
-
-            return View(categoryObj);
-
-
-
-
-        }
+       
         [Route("Category/ListSubcategories")]
         //[Route("Cars/ListCars/{category}")] // таке саме як ім'я як і параметр
         public ViewResult SubcategoriesList()

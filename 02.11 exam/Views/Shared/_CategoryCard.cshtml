@@ -1,3 +1,9 @@
 ﻿<div class="row">
     <a>@Model.CategoryName</a>
+    @{
+        foreach (Subcategory subcategory in Model.GetSubcategories)
+        {
+            @await Html.PartialAsync("_SubcategoryCard", subcategory);
+        }
+    }
 </div>
