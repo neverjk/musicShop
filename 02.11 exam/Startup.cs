@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using _02._11_exam.Data.EFContext;
+using _02._11_exam.Data.Interfaces;
+using _02._11_exam.Data.Repository;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -30,13 +32,40 @@ namespace _02._11_exam
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            //var connectionString = configuration.GetConnectionString("DefaultConnection");
+
+            services.AddDbContext<EFDbContext>(options =>
+            options.UseSqlServer(
+              Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddIdentity<DbUser, DbRole>(options => options.Stores.MaxLengthForKeys = 128)
+                .AddEntityFrameworkStores<EFDbContext>()
+                .AddDefaultTokenProviders();
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
+                {
+                    options.LoginPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
+                    options.AccessDeniedPath = new Microsoft.AspNetCore.Http.PathString("/Account/Login");
+                });
+
+
+            services.AddTransient<IProduct, ProductRepository>();
+            services.AddTransient<ICategory, CategoryRepository>();
+            services.AddTransient<ICountry, CountryRepository>();
+            services.AddTransient<IManufacturer, ManufacturerRepository>();
+
+            services.AddMemoryCache();
+            services.AddSession();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
-
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseAuthentication();
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -44,16 +73,24 @@ namespace _02._11_exam
             else
             {
                 app.UseExceptionHandler("/Home/Error");
+                app.UseHsts();
             }
 
+            app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseCookiePolicy();
+            app.UseSession();
+            //app.UseCookiePolicy();
 
+            SeederDB.SeedData(app.ApplicationServices, env, this.Configuration);
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute(
+                    name: "categoryfilter",
+                    template: "Product/{action}/{category?}",
+                    defaults: new { Controller = "Product", action = "ListProducts" });
             });
         }
     }

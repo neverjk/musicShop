@@ -1,0 +1,100 @@
+﻿@model _02._11_exam.ViewModel.RegisterViewModel
+
+<style>
+    .main-flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70vh;
+    }
+</style>
+
+<div class="main-flex">
+    <div class="card" style="width: 45rem;border-radius:15px;">
+        <div class="card-body">
+            <h5 class="card-title" style="font-family:sans-serif;">Registration</h5>
+            <form method="post" asp-controller="Account" asp-action="Register">
+                <div asp-validation-summary="ModelOnly"></div>
+                <div class="form-group">
+                    <label></label><br />
+                    <input asp-for="Email" class="form-control" id="register-email" placeholder="name@example.com" required>
+                    @*<span asp-validation-for="Email"></span>*@
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Info</label>
+                    <div class="form-row">
+                        <div class="col">
+                            <input asp-for="FirstName" id="register-name" type="text" class="form-control" placeholder="First name">
+                            @*<span asp-validation-for="FirstName"></span>*@
+                        </div>
+                        <div class="col">
+                            <input asp-for="MiddleName" id="register-middlename" type="text" class="form-control" placeholder="Middle name">
+                            @*<span asp-validation-for="MiddleName"></span>*@
+                        </div>
+                        <div class="col">
+                            <input asp-for="LastName" id="register-lastname" type="text" class="form-control" placeholder="Last name">
+                            @*<span asp-validation-for="LastName"></span>*@
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label></label><br />
+                    <input asp-for="Password" id="register-password" type="password" value="" class="form-control" required>
+                    @*<span asp-validation-for="Password"></span>*@
+                </div>
+                <div class="form-group">
+                    <label></label><br />
+                    <input asp-for="PasswordConfirm" type="password" value="" class="form-control" required>
+                    @*<span asp-validation-for="PasswordConfirm"></span>*@
+                </div>
+                <button type="submit" class="btn btn-success" style="font-family:sans-serif;">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.0/dist/bootstrap-validate.js"></script>
+<script>
+    bootstrapValidate('#register-email', 'email:Enter a valid E-Mail Address!');
+    bootstrapValidate('#register-name', 'alpha:You can use only latin letters.');
+    bootstrapValidate('#register-middlename', 'alpha:You can use only latin letters.');
+    bootstrapValidate('#register-lastname', 'alpha:You can use only latin letters.');
+    bootstrapValidate('#register-password', 'min:6:Enter at least 6 characters.');
+
+</script>
+
+@*<form method="post" asp-controller="Account" asp-action="Register">
+        <div asp-validation-summary="ModelOnly"></div>
+        <div>
+            <label asp-for="Email"></label><br />
+            <input asp-for="Email" />
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div>
+            <label asp-for="FirstName"></label><br />
+            <input asp-for="FirstName" />
+            <span asp-validation-for="FirstName"></span>
+        </div>
+        <div>
+            <label asp-for="MiddleName"></label><br />
+            <input asp-for="MiddleName" />
+            <span asp-validation-for="MiddleName"></span>
+        </div>
+        <div>
+            <label asp-for="LastName"></label><br />
+            <input asp-for="LastName" />
+            <span asp-validation-for="LastName"></span>
+        </div>
+        <div>
+            <label asp-for="Password"></label><br />
+            <input asp-for="Password" />
+            <span asp-validation-for="Password"></span>
+        </div>
+        <div>
+            <label asp-for="PasswordConfirm"></label><br />
+            <input asp-for="PasswordConfirm" />
+            <span asp-validation-for="PasswordConfirm"></span>
+        </div>
+        <div>
+            <input type="submit" value="Регистрация" />
+        </div>
+    </form>*@

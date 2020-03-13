@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ProductsList</title>
+</head>
+<body>
+    <h1>@ViewBag.Title</h1>
+    <h3>@Model.ProductCategory</h3>
+    <div class="row mt-5 mb-2">
+        @{
+            foreach (Product product in Model.GetProducts)
+            {
+                @await Html.PartialAsync("_ProductCard", product);
+            }
+        }
+    </div>
+</body>
+</html>

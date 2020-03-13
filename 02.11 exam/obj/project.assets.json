@@ -12608,9 +12608,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\files\\lessons\\02.11 exam\\musicShop\\02.11 exam\\02.11 exam.csproj",
-      "projectName": "02.11 exam",
-      "projectPath": "D:\\files\\lessons\\02.11 exam\\musicShop\\02.11 exam\\02.11 exam.csproj",
+      "projectUniqueName": "D:\\files\\lessons\\02.11 exam\\musicShop\\02.11 exam\\_02._11_exam.csproj",
+      "projectName": "_02._11_exam",
+      "projectPath": "D:\\files\\lessons\\02.11 exam\\musicShop\\02.11 exam\\_02._11_exam.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
       "outputPath": "D:\\files\\lessons\\02.11 exam\\musicShop\\02.11 exam\\obj\\",
       "projectStyle": "PackageReference",
