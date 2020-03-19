@@ -10,9 +10,8 @@
 </head>
 <body>
     <h1>@ViewBag.Title</h1>
-    @*<h3>@Model.ProductCategory</h3>*@
-    <div class="row mt-5 mb-2">
-        <ul>
+    <a type="button" class="btn btn-outline-dark" style="margin:5px" asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category=""> << All Categories</a>
+    <div class="container">
             @{
                 foreach (Category category in Model.GetCategories)
                 {
@@ -23,8 +22,6 @@
                     }
                 }
             }
-        </ul>
-        
     </div>
 </body>
 </html>

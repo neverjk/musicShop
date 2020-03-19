@@ -1,65 +1,63 @@
-﻿<li>
-    <a>@Model.CategoryName</a>
+﻿<div class="row">
+    <button type="button" class="btn btn-primary btn-lg" disabled>@Model.CategoryName</button>
     @{
         if (Model.Id == 2)
         {
-            <ul>
-                <li>
-                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Home and Clothing Care">Home and Clothing Care</a>
+            <div class="container" style="margin-left:30px">
+                <div class="row">
+                    <a type="button" class="btn btn-dark" style="margin:5px" asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Home and Clothing Care">Home and Clothing Care</a>
+                </div>
+                <div class="row">
+                    <a type="button" class="btn btn-dark" style="margin:5px" asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Kitchen Appliances">Kitchen Appliances</a>
 
-                </li>
-                <li>
-                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Kitchen Appliances">Kitchen Appliances</a>
+                </div>
+                <div class="row">
+                    <a type="button" class="btn btn-dark" style="margin:5px" asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Large home appliances">Large home appliances</a>
 
-                </li>
-                <li>
-                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Large home appliances">Large home appliances</a>
-
-                </li>
-            </ul>
-
+                </div>
+            </div>
         }
         if (Model.Id == 3)
         {
-            <ul>
-                <li>
-                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Monitors">Monitors</a>
-                </li>
-                <li>
-                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Computers">Computers</a>
-                </li>
-                <li>
-                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Laptops">Laptops</a>
-                </li>
-            </ul>
+            <div class="container" style="margin-left:30px">
+                <div class="row">
+                    <a type="button" class="btn btn-dark" style="margin:5px" asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Monitors">Monitors</a>
+                </div>
+                <div class="row">
+                    <a type="button" class="btn btn-dark" style="margin:5px" asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Computers">Computers</a>
+                </div>
+                <div class="row">
+                    <a type="button" class="btn btn-dark" style="margin:5px" asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Laptops">Laptops</a>
+                </div>
+            </div>
         }
         if (Model.Id == 4)
         {
-            <ul>
-                <li>
-                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="TV sets">TV sets</a>
-                </li>
-                <li>
-                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Smartphones">Smartphones</a>
-                </li>
-                <li>
-                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Tablets">Tablets</a>
-                </li>
-            </ul>
+            <div class="container" style="margin-left:30px">
+                <div class="row">
+                    <a type="button" class="btn btn-dark" style="margin:5px" asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="TV sets">TV sets</a>
+                </div>
+                <div class="row">
+                    <a type="button" class="btn btn-dark" style="margin:5px" asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Smartphones">Smartphones</a>
+                </div>
+                <div class="row">
+                    <a type="button" class="btn btn-dark" style="margin:5px" asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Tablets">Tablets</a>
+                </div>
+            </div>
         }
         if (Model.Id == 5)
         {
-            <ul>
-                <li>
-                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Auto parts">Auto parts</a>
-                </li>
-                <li>
-                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Car oils">Car oils</a>
-                </li>
-                <li>
-                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Auto Electronics">Auto Electronics</a>
-                </li>
-            </ul>
+            <div class="container" style="margin-left:30px">
+                <div class="row">
+                    <a type="button" class="btn btn-dark" style="margin:5px" asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Auto parts">Auto parts</a>
+                </div>
+                <div class="row">
+                    <a type="button" class="btn btn-dark" style="margin:5px" asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Car oils">Car oils</a>
+                </div>
+                <div class="row">
+                    <a type="button" class="btn btn-dark" style="margin:5px" asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Auto Electronics">Auto Electronics</a>
+                </div>
+            </div>
         }
         @*foreach (Subcategory subcategory in Model.GetSubcategories)
             { if (subcategory.CategoryID == Model.Id)

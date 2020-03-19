@@ -22,6 +22,8 @@ namespace _02._11_exam.Data.Repository
 
         public IEnumerable<Product> GetProducts => _context.Products.Include(x => x.SubcategoryName).Include(x => x.ManufacturerName);
 
+
+
         //public IEnumerable<Product> GetProductsAvailable => (_context.Products.Include(x => x.CategoryName).Include(x => x.ManufacturerName)).Where(x=>x.
     }
 }

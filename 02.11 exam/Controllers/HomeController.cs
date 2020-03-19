@@ -43,6 +43,14 @@ namespace _02._11_exam.Controllers
             return View(products);
         }
 
+        [Route("Home/About")]
+        public ViewResult About()
+        {
+            var products = new AboutViewModel() { GetProducts = _products.GetProducts };
+
+            return View(products);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

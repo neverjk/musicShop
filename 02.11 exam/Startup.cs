@@ -80,7 +80,6 @@ namespace _02._11_exam
             app.UseStaticFiles();
             app.UseSession();
             //app.UseCookiePolicy();
-
             //SeederDB.SeedData(app.ApplicationServices, env, this.Configuration);
             app.UseMvc(routes =>
             {
@@ -95,6 +94,10 @@ namespace _02._11_exam
                     name: "idfilter",
                     template: "Product/{action}/{id?}",
                     defaults: new { Controller = "Product", action = "ConcreteProduct" });
+                routes.MapRoute(
+                    name: "about",
+                    template: "Home/{action=About}/{id?}",
+                    defaults: new { Controller = "Home", action = "About" });
             });
         }
     }

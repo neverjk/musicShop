@@ -1,4 +1,4 @@
-﻿<div class="col-lg-2" style="margin:15px; border-color:lightgray; border-width:1px; border-style:solid">
+﻿<div class="col-lg-2" style="background-color:white; margin:17px; border-color:lightgray; border-width:1px; border-style:solid">
     <img class="thumbnail" style="height:100px; width:auto; padding-top:7px;" src="@Model.Image" />
     @{
         if (Model.ProductName.Length <= 50)
@@ -18,5 +18,5 @@
     }
 
     <h4>@Model.Price.ToString() грн</h4>
-    <p><a class="btn btn-warning" asp-area="" asp-controller="Products" asp-action="ConcreteProduct" asp-route-id="@Model.Id">Info</a></p>
+    <p><a class="btn btn-warning" asp-area="" asp-controller="Products" asp-action="ConcreteProduct" asp-route-productId="@Model.Id">More...</a></p>
 </div>
