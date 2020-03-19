@@ -116,7 +116,7 @@ using _02._11_exam.Data.Models;
     ");
             EndContext();
             BeginContext(3069, 169, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7ecfdc46d4c7487185345b59a1acd752", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7f18a2e3729547ceb2ac5f8a1911f64a", async() => {
                 BeginContext(3217, 17, true);
                 WriteLiteral("Newest products: ");
                 EndContext();
@@ -193,7 +193,7 @@ using _02._11_exam.Data.Models;
                 ");
             EndContext();
             BeginContext(3905, 190, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e3db3a8adba94368bbe3054054372df7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "56c30d618110433192497ab48ff7386a", async() => {
                 BeginContext(4066, 25, true);
                 WriteLiteral(" >> Go To All Categories ");
                 EndContext();

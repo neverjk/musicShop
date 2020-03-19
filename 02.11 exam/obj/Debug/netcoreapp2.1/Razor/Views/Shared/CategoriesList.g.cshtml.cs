@@ -73,7 +73,7 @@ using _02._11_exam.Data.Models;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(59, 109, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c8de399999084b898a90d6e22c68d8a9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ec5cedbc5e6044f085bb3aad5e038175", async() => {
                 BeginContext(65, 96, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>CategoriesList</title>\r\n");
                 EndContext();
@@ -93,7 +93,7 @@ using _02._11_exam.Data.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(170, 588, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "617b1f42763b4c36b74b36f518131485", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9cb93128ba8040989b2fe55064188fec", async() => {
                 BeginContext(176, 10, true);
                 WriteLiteral("\r\n    <h1>");
                 EndContext();
@@ -108,7 +108,7 @@ using _02._11_exam.Data.Models;
                 WriteLiteral("</h1>\r\n    ");
                 EndContext();
                 BeginContext(211, 173, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d460f312c0064df891a294e0e7797cb4", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d6e3727490be4743850c3ca42ea99252", async() => {
                     BeginContext(362, 18, true);
                     WriteLiteral(" << All Categories");
                     EndContext();

@@ -9,7 +9,72 @@
     <title>ConcreteProduct</title>
 </head>
 <body>
-    <h1>@ViewBag.Title</h1>
-    <h2>@Model.GetProduct.Id</h2>
-</body>
+    <div class="container">
+        <h3 style="margin-top:10px">
+            <a type="button" class="btn btn-dark" style="margin:5px" asp-area="" asp-controller="Product" asp-action="ListProducts" asp-route-category="">All Categories</a><span>>></span>
+            @{
+            if (Model.GetProduct.SubcategoryName.SubcategoryName != "")
+            {
+                <a type="button" class="btn btn-dark" style="margin:5px" sp-area="" asp-controller="Product" asp-action="ListProducts" asp-route-category="" disabled>@Model.GetProduct.SubcategoryName.SubcategoryName</a>
+            }
+            }
+        </h3>
+        <h2>@Model.GetProduct.ProductName</h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <img style="height:auto; width:500px; padding-top:7px;" src="@Model.GetProduct.Image" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="row" style="margin-bottom:5px">
+                    <div class="card w-100">
+                        <div class="card-body">
+                            <h4 class="card-title">@Model.GetProduct.Price грн</h4>
+                            <p class="card-text">Возможность кредита нужно уточнять.</p>
+                            <a href="#" class="btn btn-success">Buy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom:5px">
+                    <div class="card w-100">
+                        <div class="card-body">
+                            <p class="card-text">Manufacturer: @Model.GetProduct.ManufacturerName.ManufacturerName</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom:5px">
+                    <div class="card w-100">
+                        <div class="card-body">
+                            <p class="card-text">Delivery: Nova Poshta from 45 грн</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom:5px">
+                    <div class="card w-100">
+                        <div class="card-body">
+                            <p class="card-text">@Model.GetProduct.Description</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*@{
+            if (Model.GetProduct.Video!=""){
+
+            <div class="row">
+                <div class="card w-100">
+                    <div class="card-body">
+                        <iframe width="420" height="315"
+                                src=@Model.GetProduct.Video>
+                        </iframe>
+
+                    </div>
+                </div>
+
+            </div>}}*@
+        </div>
+    </body>
 </html>

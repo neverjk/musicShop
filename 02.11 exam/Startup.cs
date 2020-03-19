@@ -96,7 +96,7 @@ namespace _02._11_exam
                     defaults: new { Controller = "Product", action = "ConcreteProduct" });
                 routes.MapRoute(
                     name: "about",
-                    template: "Home/{action=About}/{id?}",
+                    template: "Home/{action}/{id?}",
                     defaults: new { Controller = "Home", action = "About" });
             });
         }

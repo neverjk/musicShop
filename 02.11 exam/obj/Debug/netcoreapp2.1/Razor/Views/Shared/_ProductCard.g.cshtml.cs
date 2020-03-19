@@ -137,7 +137,7 @@ WriteAttributeValue("", 213, Model.Image, 213, 12, false);
             WriteLiteral(" грн</h4>\r\n    <p>");
             EndContext();
             BeginContext(636, 137, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "024407965dad4eacb20d389dc338e3c3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b4dd09584b394df4a6af67373136d200", async() => {
                 BeginContext(762, 7, true);
                 WriteLiteral("More...");
                 EndContext();

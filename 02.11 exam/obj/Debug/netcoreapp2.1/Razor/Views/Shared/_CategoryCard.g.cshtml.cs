@@ -96,7 +96,7 @@ using _02._11_exam.Data.Models;
             WriteLiteral("            <div class=\"container\" style=\"margin-left:30px\">\r\n                <div class=\"row\">\r\n                    ");
             EndContext();
             BeginContext(279, 191, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "169991d3e8e5415ca90961ff1719ae5c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "219bcfe3b12f427cb2d8c9baa0606e5a", async() => {
                 BeginContext(444, 22, true);
                 WriteLiteral("Home and Clothing Care");
                 EndContext();
@@ -131,7 +131,7 @@ using _02._11_exam.Data.Models;
             WriteLiteral("\r\n                </div>\r\n                <div class=\"row\">\r\n                    ");
             EndContext();
             BeginContext(551, 183, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "323efa18532a48c98c7091e0c41c0dfc", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ace0180db6914fe78ac6a6ed60151908", async() => {
                 BeginContext(712, 18, true);
                 WriteLiteral("Kitchen Appliances");
                 EndContext();
@@ -166,7 +166,7 @@ using _02._11_exam.Data.Models;
             WriteLiteral("\r\n\r\n                </div>\r\n                <div class=\"row\">\r\n                    ");
             EndContext();
             BeginContext(817, 189, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3010bbc022ec450f84c5d6b040884ad9", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d33a50bd7fe0486a871219a9dfae9f3f", async() => {
                 BeginContext(981, 21, true);
                 WriteLiteral("Large home appliances");
                 EndContext();
@@ -211,7 +211,7 @@ using _02._11_exam.Data.Models;
             WriteLiteral("            <div class=\"container\" style=\"margin-left:30px\">\r\n                <div class=\"row\">\r\n                    ");
             EndContext();
             BeginContext(1221, 163, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9564876351f64ce6931f69ffa42c6c18", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "977e4e32a6a2417089882ed82beb36d5", async() => {
                 BeginContext(1372, 8, true);
                 WriteLiteral("Monitors");
                 EndContext();
@@ -246,7 +246,7 @@ using _02._11_exam.Data.Models;
             WriteLiteral("\r\n                </div>\r\n                <div class=\"row\">\r\n                    ");
             EndContext();
             BeginContext(1465, 165, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c7d311e766d0436997a4c0099166b642", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "726103e118ef443c892b5676421cac9c", async() => {
                 BeginContext(1617, 9, true);
                 WriteLiteral("Computers");
                 EndContext();
@@ -281,7 +281,7 @@ using _02._11_exam.Data.Models;
             WriteLiteral("\r\n                </div>\r\n                <div class=\"row\">\r\n                    ");
             EndContext();
             BeginContext(1711, 161, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b3c28ad636b44c2099cf57c1a265d687", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "51709fe3df2a4adda456e0cdd9a90212", async() => {
                 BeginContext(1861, 7, true);
                 WriteLiteral("Laptops");
                 EndContext();
@@ -326,7 +326,7 @@ using _02._11_exam.Data.Models;
             WriteLiteral("            <div class=\"container\" style=\"margin-left:30px\">\r\n                <div class=\"row\">\r\n                    ");
             EndContext();
             BeginContext(2085, 161, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e6e701f872cc478d84fca75a6f545ba3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "39bf28895e804ad2b216a48bdc98120d", async() => {
                 BeginContext(2235, 7, true);
                 WriteLiteral("TV sets");
                 EndContext();
@@ -361,7 +361,7 @@ using _02._11_exam.Data.Models;
             WriteLiteral("\r\n                </div>\r\n                <div class=\"row\">\r\n                    ");
             EndContext();
             BeginContext(2327, 169, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "80a52360415540999c422112249a684c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ccc3c3489e3d4f16b8689fe7f0bbc642", async() => {
                 BeginContext(2481, 11, true);
                 WriteLiteral("Smartphones");
                 EndContext();
@@ -396,7 +396,7 @@ using _02._11_exam.Data.Models;
             WriteLiteral("\r\n                </div>\r\n                <div class=\"row\">\r\n                    ");
             EndContext();
             BeginContext(2577, 161, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4911d76f75274295b8aa336eb51f0c65", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9f6d069e9c6e4cd7b364dabe1fd6a37d", async() => {
                 BeginContext(2727, 7, true);
                 WriteLiteral("Tablets");
                 EndContext();
@@ -441,7 +441,7 @@ using _02._11_exam.Data.Models;
             WriteLiteral("            <div class=\"container\" style=\"margin-left:30px\">\r\n                <div class=\"row\">\r\n                    ");
             EndContext();
             BeginContext(2951, 167, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b32b12b2838443a5a4a6f5146aef0895", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "140d04b4a1ba469ea37eaadd3c045150", async() => {
                 BeginContext(3104, 10, true);
                 WriteLiteral("Auto parts");
                 EndContext();
@@ -476,7 +476,7 @@ using _02._11_exam.Data.Models;
             WriteLiteral("\r\n                </div>\r\n                <div class=\"row\">\r\n                    ");
             EndContext();
             BeginContext(3199, 163, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "84168a777af441d88f2c44e07ace894c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "48f0782fe79643868a663ebcf7514658", async() => {
                 BeginContext(3350, 8, true);
                 WriteLiteral("Car oils");
                 EndContext();
@@ -511,7 +511,7 @@ using _02._11_exam.Data.Models;
             WriteLiteral("\r\n                </div>\r\n                <div class=\"row\">\r\n                    ");
             EndContext();
             BeginContext(3443, 179, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "61d672612ab24f20816155ca54c2cb5d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6b4230161a0b4c93ac522846b5a10878", async() => {
                 BeginContext(3602, 16, true);
                 WriteLiteral("Auto Electronics");
                 EndContext();
