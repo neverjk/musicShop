@@ -23,31 +23,31 @@ namespace _02._11_exam.Controllers
         }
 
        
-        [Route("Category/ListSubcategories")]
-        //[Route("Cars/ListCars/{category}")] // таке саме як ім'я як і параметр
-        public ViewResult SubcategoriesList()
-        {
-            var info = HttpContext.Session.GetString("UserInfo");
-            if (info != null)
-            {
-                var result = JsonConvert.DeserializeObject<UserInfo>(info);
-                var id = result.UserId;
-            }
+        //[Route("Category/ListSubcategories")]
+        ////[Route("Cars/ListCars/{category}")] // таке саме як ім'я як і параметр
+        //public ViewResult SubcategoriesList()
+        //{
+        //    var info = HttpContext.Session.GetString("UserInfo");
+        //    if (info != null)
+        //    {
+        //        var result = JsonConvert.DeserializeObject<UserInfo>(info);
+        //        var id = result.UserId;
+        //    }
 
-            IEnumerable<Subcategory> subcategories = null;
-            subcategories = _subcategories.GetSubcategories.OrderBy(i => i.SubcategoryName);
-
-
-            var categoryObj = new ListSubcategoriesViewModel
-            {
-                GetSubcategories = subcategories,
-            };
-
-            return View(categoryObj);
+        //    IEnumerable<Subcategory> subcategories = null;
+        //    subcategories = _subcategories.GetSubcategories.OrderBy(i => i.SubcategoryName);
 
 
+        //    var categoryObj = new ListSubcategoriesViewModel
+        //    {
+        //        GetSubcategories = subcategories,
+        //    };
+
+        //    return View(categoryObj);
 
 
-        }
+
+
+        //}
     }
 }

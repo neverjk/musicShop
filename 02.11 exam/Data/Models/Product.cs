@@ -19,6 +19,6 @@ namespace _02._11_exam.Data.Models
         public virtual Subcategory SubcategoryName { get; set; }
         [ForeignKey("ManufacturerName")]
         public int ManufacturerId { get; set; }
-        public virtual Category ManufacturerName { get; set; }
+        public virtual Manufacturer ManufacturerName { get; set; }
     }
 }

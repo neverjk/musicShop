@@ -39,7 +39,7 @@ namespace _02._11_exam.Controllers
             string productCategory = "";
             if (string.IsNullOrEmpty(category))
             {
-                products = _products.GetProducts.OrderBy(i=>i.ProductName);
+                products = _products.GetProducts.OrderBy(i => i.ProductName);
             }
             else
             {
@@ -79,5 +79,28 @@ namespace _02._11_exam.Controllers
 
 
         }
+
+        [Route("Product/ConcreteProduct")]
+        public ViewResult ConcreteProduct(int productId)
+        {
+            var info = HttpContext.Session.GetString("UserInfo");
+            if (info != null)
+            {
+                var result = JsonConvert.DeserializeObject<UserInfo>(info);
+                var id = result.UserId;
+            }
+
+            Product product = null;
+            string productCategory = "";
+            product = _products.GetProducts.Where(x => x.Id == productId).LastOrDefault();
+
+            var productObj = new ConcreteProductViewModel
+            {
+                GetProduct=product
+            };
+
+            return View(productObj);
+        }
+
     }
 }

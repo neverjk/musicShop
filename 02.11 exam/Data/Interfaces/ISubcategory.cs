@@ -9,6 +9,5 @@ namespace _02._11_exam.Data.Interfaces
     public interface ISubcategory 
     {
         IEnumerable<Subcategory> GetSubcategories { get; }
-
     }
 }

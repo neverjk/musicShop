@@ -12,12 +12,19 @@
     <h1>@ViewBag.Title</h1>
     @*<h3>@Model.ProductCategory</h3>*@
     <div class="row mt-5 mb-2">
-        @{
-            foreach (Category category in Model.GetCategories)
-            {
-                @await Html.PartialAsync("_CategoryCard", category);
+        <ul>
+            @{
+                foreach (Category category in Model.GetCategories)
+                {
+                    if (category.Id > 1 && category.Id < 6)
+                    {
+                        @await Html.PartialAsync("_CategoryCard", category);
+
+                    }
+                }
             }
-        }
+        </ul>
+        
     </div>
 </body>
 </html>

@@ -76,12 +76,12 @@ namespace _02._11_exam
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSession();
             //app.UseCookiePolicy();
 
-            SeederDB.SeedData(app.ApplicationServices, env, this.Configuration);
+            //SeederDB.SeedData(app.ApplicationServices, env, this.Configuration);
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
@@ -91,6 +91,10 @@ namespace _02._11_exam
                     name: "categoryfilter",
                     template: "Product/{action}/{category?}",
                     defaults: new { Controller = "Product", action = "ListProducts" });
+                routes.MapRoute(
+                    name: "idfilter",
+                    template: "Product/{action}/{id?}",
+                    defaults: new { Controller = "Product", action = "ConcreteProduct" });
             });
         }
     }

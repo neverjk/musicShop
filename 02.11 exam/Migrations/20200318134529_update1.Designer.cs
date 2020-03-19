@@ -10,8 +10,8 @@ using _02._11_exam.Data.EFContext;
 namespace _02._11_exam.Migrations
 {
     [DbContext(typeof(EFDbContext))]
-    [Migration("20200313125438_update27")]
-    partial class update27
+    [Migration("20200318134529_update1")]
+    partial class update1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -158,8 +158,6 @@ namespace _02._11_exam.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CategoryId");
-
                     b.Property<string>("Description");
 
                     b.Property<string>("Image");
@@ -170,13 +168,15 @@ namespace _02._11_exam.Migrations
 
                     b.Property<string>("ProductName");
 
+                    b.Property<int>("SubcategoryId");
+
                     b.Property<string>("Video");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryId");
-
                     b.HasIndex("ManufacturerId");
+
+                    b.HasIndex("SubcategoryId");
 
                     b.ToTable("Products");
                 });
@@ -338,14 +338,14 @@ namespace _02._11_exam.Migrations
 
             modelBuilder.Entity("_02._11_exam.Data.Models.Product", b =>
                 {
-                    b.HasOne("_02._11_exam.Data.Models.Category", "CategoryName")
-                        .WithMany()
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.HasOne("_02._11_exam.Data.Models.Category", "ManufacturerName")
+                    b.HasOne("_02._11_exam.Data.Models.Manufacturer", "ManufacturerName")
                         .WithMany()
                         .HasForeignKey("ManufacturerId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("_02._11_exam.Data.Models.Subcategory", "SubcategoryName")
+                        .WithMany()
+                        .HasForeignKey("SubcategoryId")
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 

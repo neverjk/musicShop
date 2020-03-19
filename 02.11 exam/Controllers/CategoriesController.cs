@@ -15,11 +15,11 @@ namespace _02._11_exam.Controllers
     public class CategoriesController : Controller
     {
         private readonly ICategory _categories;
-        private readonly ISubcategory _subcategories;
+        //private readonly ISubcategory _subcategories;
 
-        public CategoriesController(ISubcategory subcategories, ICategory categories, ICategory category)
+        public CategoriesController(ICategory categories, ICategory category)
         {
-            _subcategories = subcategories;
+            //_subcategories = subcategories;
             _categories = categories;
         }
 
@@ -37,11 +37,15 @@ namespace _02._11_exam.Controllers
 
             IEnumerable<Category> categories = null;
             categories = _categories.GetCategories.OrderBy(i=>i.CategoryName);
-            
+            //IEnumerable<Subcategory> subcategories = null;
+            //subcategories = _subcategories.GetSubcategories.OrderBy(i => i.SubcategoryName);
+
+
 
             var categoryObj = new ListCategoriesViewModel
             {
                 GetCategories = categories,
+                //GetSubcategories=subcategories
             };
 
             return View(categoryObj);
@@ -50,31 +54,44 @@ namespace _02._11_exam.Controllers
 
 
         }
-        [Route("Category/ListSubcategories")]
-        //[Route("Cars/ListCars/{category}")] // таке саме як ім'я як і параметр
-        public ViewResult SubcategoriesList()
-        {
-            var info = HttpContext.Session.GetString("UserInfo");
-            if (info != null)
-            {
-                var result = JsonConvert.DeserializeObject<UserInfo>(info);
-                var id = result.UserId;
-            }
+        //[Route("Category/ListSubcategories")]
+        ////[Route("Cars/ListCars/{category}")] // таке саме як ім'я як і параметр
+        //public ViewResult SubcategoriesList(string category)
+        //{
+        //    var info = HttpContext.Session.GetString("UserInfo");
+        //    if (info != null)
+        //    {
+        //        var result = JsonConvert.DeserializeObject<UserInfo>(info);
+        //        var id = result.UserId;
+        //    }
 
-            IEnumerable<Subcategory> subcategories = null;
-            subcategories = _subcategories.GetSubcategories.OrderBy(i => i.SubcategoryName);
-
-
-            var categoryObj = new ListSubcategoriesViewModel
-            {
-                GetSubcategories = subcategories,
-            };
-
-            return View(categoryObj);
-
-
+        //    IEnumerable<Subcategory> subcategories = null;
+        //    string subcategoryCategory = "";
+        //    if (string.IsNullOrEmpty(category))
+        //    {
+        //        subcategories = _subcategories.GetSubcategories.OrderBy(i => i.Id);
+        //    }
+        //    else
+        //    {
+        //        subcategories = _subcategories.GetSubcategories
+        //            .Where(x => x.Category.CategoryName.ToLower().Equals(category.ToLower()));
 
 
-        }
+
+        //        subcategoryCategory = category;
+        //    }
+
+        //    var subObj = new ListSubcategoriesViewModel
+        //    {
+        //        GetSubcategories=subcategories,
+        //         MainCategory = subcategoryCategory
+        //    };
+
+        //    return View(subObj);
+
+
+
+
+        //}
     }
 }

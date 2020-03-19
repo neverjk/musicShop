@@ -10,8 +10,8 @@
 </head>
 <body>
     <h1>@ViewBag.Title</h1>
-    <h3>@Model.ProductCategory</h3>
-    <div class="row mt-5 mb-2">
+    <h3><a asp-area="" asp-controller="Product" asp-action="ListProducts" asp-route-category="">All Categories</a> >> @Model.ProductCategory</h3>
+    <div class="row mt-5 mb-2" style="justify-content:stretch; display:flex">
         @{
             foreach (Product product in Model.GetProducts)
             {

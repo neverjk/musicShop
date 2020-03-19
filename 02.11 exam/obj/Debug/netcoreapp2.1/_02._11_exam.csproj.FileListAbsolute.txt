@@ -34,8 +34,8 @@ D:\files\lessons\02.11 exam\musicShop\02.11 exam\obj\Debug\netcoreapp2.1\Razor\V
 D:\files\lessons\02.11 exam\musicShop\02.11 exam\obj\Debug\netcoreapp2.1\Razor\Views\Account\ForgotPassword.g.cshtml.cs
 D:\files\lessons\02.11 exam\musicShop\02.11 exam\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.g.cshtml.cs
 D:\files\lessons\02.11 exam\musicShop\02.11 exam\obj\Debug\netcoreapp2.1\Razor\Views\Account\Register.g.cshtml.cs
-D:\files\lessons\02.11 exam\musicShop\02.11 exam\obj\Debug\netcoreapp2.1\_02._11_exam.csprojAssemblyReference.cache
 D:\files\lessons\02.11 exam\musicShop\02.11 exam\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CategoryCard.g.cshtml.cs
 D:\files\lessons\02.11 exam\musicShop\02.11 exam\obj\Debug\netcoreapp2.1\Razor\Views\Products\ProductsList.g.cshtml.cs
 D:\files\lessons\02.11 exam\musicShop\02.11 exam\obj\Debug\netcoreapp2.1\Razor\Views\Shared\CategoriesList.g.cshtml.cs
 D:\files\lessons\02.11 exam\musicShop\02.11 exam\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_SubcategoryCard.g.cshtml.cs
+D:\files\lessons\02.11 exam\musicShop\02.11 exam\obj\Debug\netcoreapp2.1\Razor\Views\Products\ConcreteProduct.g.cshtml.cs

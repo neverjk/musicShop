@@ -1,9 +1,72 @@
-﻿<div class="row">
+﻿<li>
     <a>@Model.CategoryName</a>
     @{
-        foreach (Subcategory subcategory in Model.GetSubcategories)
+        if (Model.Id == 2)
         {
-            @await Html.PartialAsync("_SubcategoryCard", subcategory);
+            <ul>
+                <li>
+                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Home and Clothing Care">Home and Clothing Care</a>
+
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Kitchen Appliances">Kitchen Appliances</a>
+
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Large home appliances">Large home appliances</a>
+
+                </li>
+            </ul>
+
         }
+        if (Model.Id == 3)
+        {
+            <ul>
+                <li>
+                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Monitors">Monitors</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Computers">Computers</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Laptops">Laptops</a>
+                </li>
+            </ul>
+        }
+        if (Model.Id == 4)
+        {
+            <ul>
+                <li>
+                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="TV sets">TV sets</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Smartphones">Smartphones</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Tablets">Tablets</a>
+                </li>
+            </ul>
+        }
+        if (Model.Id == 5)
+        {
+            <ul>
+                <li>
+                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Auto parts">Auto parts</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Car oils">Car oils</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Products" asp-action="ProductsList" asp-route-category="Auto Electronics">Auto Electronics</a>
+                </li>
+            </ul>
+        }
+        @*foreach (Subcategory subcategory in Model.GetSubcategories)
+            { if (subcategory.CategoryID == Model.Id)
+                {
+
+                @await Html.PartialAsync("_SubcategoryCard", subcategory);
+                }
+            }*@
     }
 </div>

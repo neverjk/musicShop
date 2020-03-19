@@ -1,6 +1,22 @@
-﻿<div class="col-lg-4">
-    <img class="thumbnail" style="height:160px;width:320px" src="@Model.Image" />
-    <p>Model: @Model.ProductName</p>
-    <p>Price:  @Model.Price.ToString("C")</p>
-    <p><a class="btn btn-warning" href="#">Info</a></p>
+﻿<div class="col-lg-2" style="margin:15px; border-color:lightgray; border-width:1px; border-style:solid">
+    <img class="thumbnail" style="height:100px; width:auto; padding-top:7px;" src="@Model.Image" />
+    @{
+        if (Model.ProductName.Length <= 50)
+        {
+            <p>@Model.ProductName</p>
+        }
+        else
+        {
+            var res = "";
+            for(int i = 0; i <= 47; i++)
+            {
+                res += Model.ProductName[i];
+            }
+            res += "...";
+            <p>@res</p>
+        }
+    }
+
+    <h4>@Model.Price.ToString() грн</h4>
+    <p><a class="btn btn-warning" asp-area="" asp-controller="Products" asp-action="ConcreteProduct" asp-route-id="@Model.Id">Info</a></p>
 </div>
