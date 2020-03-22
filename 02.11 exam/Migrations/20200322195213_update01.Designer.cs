@@ -10,8 +10,8 @@ using _02._11_exam.Data.EFContext;
 namespace _02._11_exam.Migrations
 {
     [DbContext(typeof(EFDbContext))]
-    [Migration("20200318134529_update1")]
-    partial class update1
+    [Migration("20200322195213_update01")]
+    partial class update01
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

@@ -205,8 +205,8 @@ namespace _02._11_exam.Data.EFContext
 
 
                 //SeederDB.SeedRegions(context);
-                //SeederDB.SeedRoles(managerRole);
-                //SeederDB.SeedTables(context);
+                SeederDB.SeedRoles(managerRole);
+                SeederDB.SeedTables(context);
             }
         }
 

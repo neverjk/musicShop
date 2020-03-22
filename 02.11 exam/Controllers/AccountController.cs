@@ -10,6 +10,7 @@ using _02._11_exam.Services;
 using _02._11_exam.ViewModel;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -36,6 +37,27 @@ namespace _02._11_exam.Controllers
             _roleManager = roleManager;
             _context = context;
             //_myEmailSender = myEmailSender;
+        }
+
+        [Authorize]
+        [Route("Account/PersonalAccount")]
+        public ViewResult PersonalAccount()
+        {
+            var info = HttpContext.Session.GetString("UserInfo");
+            if (info != null)
+            {
+                var result = JsonConvert.DeserializeObject<UserInfo>(info);
+                var id = result.UserId;
+                var userObj = new PersonalAccountViewModel()
+                {
+                    GetUserInfo = result
+                };
+                return View(userObj);
+            }
+            else
+            {
+                return View();
+            }
         }
 
         [HttpGet]
@@ -79,7 +101,7 @@ namespace _02._11_exam.Controllers
                 return View();
             }
             var user = _context.Users
-                .Include(x=>x.UserProfile)
+                .Include(x => x.UserProfile)
                 .FirstOrDefault(u => u.Email == model.Email);
             if (user == null)
             {
@@ -89,8 +111,7 @@ namespace _02._11_exam.Controllers
             var userName = user.UserProfile.FirstName;
 
             EmailService emailService = new EmailService();
-            string url = "https://localhost:44370/Account/ChangePassword/" + user.Id;
-
+            string url = "http://localhost:50560/Account/ChangePassword/" + user.Id;
 
             await emailService.SendEmailAsync(model.Email, "ForgotPassword",
                 $" Dummie {userName}," +
@@ -145,7 +166,7 @@ namespace _02._11_exam.Controllers
             };
             HttpContext.Session.SetString("UserInfo", JsonConvert.SerializeObject(userInfo));
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("PersonalAccount", "Account");
         }
 
         private async Task Authenticate(string userName)
@@ -193,37 +214,37 @@ namespace _02._11_exam.Controllers
             var roleName = "User";
 
             UserProfile userProfile = new UserProfile()
+            {
+                FirstName = model.FirstName,
+                MiddleName = model.MiddleName,
+                LastName = model.LastName,
+                RegistrationDate = DateTime.Now,
+            };
+
+            DbUser dbUser = new DbUser()
+            {
+                Email = model.Email,
+                UserName = model.Email,
+                UserProfile = userProfile,
+            };
+
+            var result = await _userManager.CreateAsync(dbUser, model.Password);
+            result = _userManager.AddToRoleAsync(dbUser, roleName).Result;
+
+
+            if (result.Succeeded)
+            {
+                // установка куки
+                await _signInManager.SignInAsync(dbUser, false);
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                foreach (var error in result.Errors)
                 {
-                    FirstName = model.FirstName,
-                    MiddleName = model.MiddleName,
-                    LastName = model.LastName,
-                    RegistrationDate = DateTime.Now,
-                };
-
-                DbUser dbUser = new DbUser()
-                {
-                    Email = model.Email,
-                    UserName = model.Email,
-                    UserProfile = userProfile,
-                };
-
-                var result = await _userManager.CreateAsync(dbUser, model.Password);
-                result = _userManager.AddToRoleAsync(dbUser, roleName).Result;
-
-
-                if (result.Succeeded)
-                {
-                    // установка куки
-                    await _signInManager.SignInAsync(dbUser, false);
-                    return RedirectToAction("Index", "Home");
+                    ModelState.AddModelError(string.Empty, error.Description);
                 }
-                else
-                {
-                    foreach (var error in result.Errors)
-                    {
-                        ModelState.AddModelError(string.Empty, error.Description);
-                    }
-                }
+            }
 
             return View(model);
         }

@@ -1,31 +1,48 @@
 ﻿@model _02._11_exam.ViewModel.LoginViewModel
 
 
+<style>
+    .main-flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70vh;
+    }
+</style>
 
-<h2>Вход на сайт</h2>
 
+<div class="main-flex">
+    <div class="card" style="width: 45rem;border-radius:15px; ">
+        <div class="card-body">
+            <h5 class="card-title" style="font-family:sans-serif;">Login</h5>
 
+            <a type="button" class="btn btn-sm btn-dark" style="width:100px" asp-area="" asp-controller="Account" asp-action="Register">Register</a>
+            <form method="post" asp-controller="Account" asp-action="Login">
+                <div asp-validation-summary="ModelOnly"></div>
+                <div class="form-group">
+                    <label></label><br />
+                    <input asp-for="Email" class="form-control" id="register-email" placeholder="Email" required>
+                    @*<span asp-validation-for="Email"></span>*@
+                </div>
+                <div class="form-group">
+                    <label></label><br />
+                    <input asp-for="Password" id="register-password" type="password" value="" placeholder="Password" class="form-control" required>
+                    @*<span asp-validation-for="Password"></span>*@
+                </div>
+                <button type="submit" class="btn btn-success" style="font-family:sans-serif;">Submit</button>
 
-<a asp-action="Register" asp-controller="Account">Регистрация</a>
+                <a type="button" class="btn btn-dark" style="margin:5px" asp-area="" asp-controller="Account" asp-action="ForgotPassword">Forgot password</a>
+            </form>
 
-
-
-<form asp-action="Login" asp-controller="Account" asp-anti-forgery="true">
-    <div class="validation" asp-validation-summary="ModelOnly" />
-    <div>
-        <div class="form-group">
-            <label asp-for="Email">Введите Email</label>
-            <input type="text" asp-for="Email" />
-            <span asp-validation-for="Email" />
         </div>
-        <div class="form-group">
-            <label asp-for="Password">Введите пароль</label>
-            <input asp-for="Password" />
-            <span asp-validation-for="Password" />
-        </div>
-        <div class="form-group">
-            <input type="submit" value="Войти" class="btn btn-outline-dark" />
-        </div>
-        <a asp-action="ForgotPassword" asp-controller="Account">Forgot password</a>
     </div>
-</form>
+</div>
+<script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.2.0/dist/bootstrap-validate.js"></script>
+<script>
+    bootstrapValidate('#register-email', 'email:Enter a valid E-Mail Address!');
+    bootstrapValidate('#register-name', 'alpha:You can use only latin letters.');
+    bootstrapValidate('#register-middlename', 'alpha:You can use only latin letters.');
+    bootstrapValidate('#register-lastname', 'alpha:You can use only latin letters.');
+    bootstrapValidate('#register-password', 'min:6:Enter at least 6 characters.');
+
+</script>

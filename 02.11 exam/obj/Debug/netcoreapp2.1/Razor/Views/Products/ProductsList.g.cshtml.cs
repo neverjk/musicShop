@@ -74,7 +74,7 @@ using _02._11_exam.Data.Models;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(59, 107, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "985d0658dbc4460991415ba675c54a77", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "cf0b9430ebe1495e98bf40bddd8e61b7", async() => {
                 BeginContext(65, 94, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>ProductsList</title>\r\n");
                 EndContext();
@@ -94,7 +94,7 @@ using _02._11_exam.Data.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(168, 815, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4d187559e9274f09b88404f67f506a42", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1d19a278649f46328558ca5258268a3a", async() => {
                 BeginContext(174, 10, true);
                 WriteLiteral("\r\n    <h1>");
                 EndContext();
@@ -109,7 +109,7 @@ using _02._11_exam.Data.Models;
                 WriteLiteral("</h1>\r\n    <h3>\r\n        ");
                 EndContext();
                 BeginContext(223, 160, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "65a6206bdc1b45188e80475c6eb4f999", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "333f609210384661b2f73768e8401480", async() => {
                     BeginContext(365, 14, true);
                     WriteLiteral("All Categories");
                     EndContext();
@@ -154,7 +154,7 @@ using _02._11_exam.Data.Models;
                 WriteLiteral("                ");
                 EndContext();
                 BeginContext(489, 176, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4c0af907c3e44b928b9b8b286e120068", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "46839f0f293544a4959e5f6f3ac4b02b", async() => {
                     BeginContext(640, 21, false);
 #line 18 "D:\files\lessons\02.11 exam\musicShop\02.11 exam\Views\Products\ProductsList.cshtml"
                                                                                                                                                                  Write(Model.ProductCategory);
